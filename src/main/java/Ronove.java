@@ -9,7 +9,7 @@ import discord4j.core.object.entity.User;
 public class Ronove {
 
     public static void main(String[] args) {
-        GatewayDiscordClient client = DiscordClientBuilder.create("Nzc3MjYzNjU1MTM3NTc0OTUy.X7A5MA.uTKTAwzOc_6GtMTU0J2rhwvsN9U").build().login().block();
+        GatewayDiscordClient client = DiscordClientBuilder.create(Token.getToken()).build().login().block();
 
         client.getEventDispatcher().on(ReadyEvent.class)
                 .subscribe(event -> {
